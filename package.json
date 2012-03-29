@@ -1,0 +1,9 @@
+{
+  "name": "my favorite bug", 
+  "version": "0.1.0", 
+  "main": "./app.js", 
+  "private": true, 
+  "dependencies": {
+    "express": "2.5.1"
+  }
+}
