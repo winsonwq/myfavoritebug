@@ -1,0 +1,59 @@
+body,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend {
+  margin: 0;
+  padding: 0;
+  border: none;}
+
+body {
+  font: 14px/1.25 gesta, "gesta-1", "gesta-2", Lucida Sans Unicode, Lucida Grande, sans-serif, Arial;
+  background: #fff;
+  min-width: 800px;}
+
+h1,h2,h3,h4,h5,h6 {
+  text-transform: uppercase;}
+
+h2 {
+  font-size: 1.5em;}
+
+a:link,a:visited {
+  text-decoration: none;}
+
+legend {
+  display: none;}
+
+span.btn {
+  display: inline-block;
+  border: 1px solid #318ce8;
+  background: #00a2ff;
+  padding: 3px 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 2px #ccc;
+  -moz-box-shadow: 0px 1px 2px #ccc;}
+span.btn input[type=submit],input[type=button] {
+  border: none;
+  background: none;
+  margin: 0;
+  paddin: 0;
+  color: #fff;
+  cursor: pointer;}
+
+span.btn:hover {
+  border-color: #0074ea;
+  cursor: pointer;}
+
+input {
+  font-size: 13px;}
+
+input[type=text],input[type=search] {
+  padding: 3px;
+  margin: 0;
+  border: 1px solid #aaa;
+  outline: none;
+  -webkit-box-shadow: inset 1px 1px 2px #ccc;
+  -moz-box-shadow: inset 1px 1px 2px #ccc;}
+
+input[type=text]:focus,input[type=search]:focus {
+  border-color: #e632d4;}
+
+.purple {
+  color: #e632d4;}

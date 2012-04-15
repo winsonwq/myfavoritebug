@@ -1,6 +1,12 @@
 !!!
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    title My Favorite Bug
+    link(rel='stylesheet', href='/stylesheets/base.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(type='text/javascript', data-main='/scripts/main', src='/scripts/require.js')
+  body
+    include includes/header
+    #main-container!= body
+
+    

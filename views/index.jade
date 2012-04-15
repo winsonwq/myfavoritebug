@@ -1,2 +1,16 @@
-h1= title
-p Welcome to #{title}
+div#search-container
+  fieldset#search-fieldset
+    h2 Search
+    form(action='/#', method="get")
+      p
+        label#bug-name-label(for='bug-name')
+          | Bug Name
+        input#bug-name(name='bug-name', type='text')
+      p
+        label#bug-tags-label(for='bug-tags')
+          | Bug Tags
+        input#bug-tags(name='bug-tags', type='text')
+      p
+        span.btn
+          input#search-bugs(type='submit', value='Search')
+div#bug-area
