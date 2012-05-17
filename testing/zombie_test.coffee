@@ -9,5 +9,5 @@ browser.visit 'http://localhost:3001', ->
 	browser
 		.fill('#bug-name', 'hello')
 		.pressButton '#search-bugs', ->
-			assert.ok browser.success ;
+			assert.ok browser.success
 

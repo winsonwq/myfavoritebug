@@ -6,6 +6,7 @@
       	"express": "2.5.1", 
 		"jade": ">= 0.0.1",
 		"sass": "*",
-		"zombie": "latest"
+		"zombie": "latest",
+		"underscore" : "latest"
 	}
 }
