@@ -1,4 +1,4 @@
-div#search-container
+div.span3#search-container
   fieldset#search-fieldset
     h2 Search
     form(action='/#', method="get")
@@ -11,6 +11,10 @@ div#search-container
           | Bug Tags
         input#bug-tags(name='bug-tags', type='text')
       p
-        span.btn
-          input#search-bugs(type='submit', value='Search')
-div#bug-area
+        div.btn#search-bugs(type='submit', value='Search') Search
+      
+div#bug-area.span9
+ div#container
+  div.item This is the first bug
+  div.item This is the second bug
+  div.item What? so many bugs
