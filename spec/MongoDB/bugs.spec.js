@@ -8,7 +8,7 @@ describe("Bugs", function() {
   });
 
   it("#create", function(done) {
-  	var newBug = { id: 8, title: "A silly bug", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
+  	var newBug = { id: 8, title: "testing bug title", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
     Bugs.create(newBug, function(err, bug){
       should.strictEqual(err, null);
       bug.should.have.length(1)
@@ -18,18 +18,19 @@ describe("Bugs", function() {
   });
 
   it("#delete", function(done){
-  	var newBug = { id: 8, title: "A silly bug", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
-    Bugs.create(newBug, function(err, bug){
-    	Bugs.delete(bug[0], function(){
-    		done();
-    	});
-    });
+  	var bug = { id : 8, title: "testing bug title" };
+  	Bugs.delete(bug, function(){
+  		done();
+  	});
   });
 
   it("#find", function(done){
-  	Bugs.find({}, {}, function(err, bugs){
-      bugs.length.should.not.equal(0);
-  		done();
-  	});
+    var bug = { id: 8, title: "testing bug title", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
+    Bugs.create(bug, function(err){
+    	Bugs.find({ id: 8, title: "testing bug title" }, {}, function(err, bugs){
+        bugs.length.should.equal(1);
+    		done();
+    	});
+    });
   });
 });
