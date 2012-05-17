@@ -1,34 +1,35 @@
-describe("mongodb operation for bugs", function() {
+describe("Bugs", function() {
+
+  var should = require('should');
   var Bugs;
 
   beforeEach(function() {
     Bugs = require('../../models/MongoDB/bugs');
   });
 
-  it("can insert bug in to database", function() {
+  it("#create", function(done) {
   	var newBug = { id: 8, title: "A silly bug", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
     Bugs.create(newBug, function(err, bug){
-    	expect(err).toEqual(null);
-    	expect(bug._id).not.toBe(0);
+      should.strictEqual(err, null);
+      bug.should.have.length(1)
+      bug[0].should.have.property('_id');
+    	done();
     });
-    waits(3000);
   });
 
-  it("can delete bug by id", function(){
+  it("#delete", function(done){
   	var newBug = { id: 8, title: "A silly bug", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"]};
     Bugs.create(newBug, function(err, bug){
-    	Bugs.delete(bug[0], function(err){
-    		expect(err).toEqual(null);
+    	Bugs.delete(bug[0], function(){
+    		done();
     	});
     });
-    waits(3000);
   });
 
-  it("should return all bugs", function(){
+  it("#find", function(done){
   	Bugs.find({}, {}, function(err, bugs){
-  		expect(err).toEqual(null);
-  		expect(bugs.length).not.toBe(0);
+      bugs.length.should.not.equal(0);
+  		done();
   	});
-  	waits(3000);
   });
 });

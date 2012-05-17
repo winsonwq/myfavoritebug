@@ -7,6 +7,8 @@
 		"jade": ">= 0.0.1",
 		"sass": "*",
 		"zombie": "latest",
-		"underscore" : "latest"
+		"underscore" : "latest",
+		"should" : "latest",
+		"mocha" : "latest"
 	}
 }
