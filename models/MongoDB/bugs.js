@@ -45,7 +45,6 @@ var Bugs = {
                     queryObj.$and.push({tags: tags[i]});
                 };
             }
-
             coll.find(queryObj, function(err,cursor){
                 cursor.toArray(function (err, result) {
                     callback(result);
