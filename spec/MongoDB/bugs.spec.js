@@ -28,9 +28,12 @@ describe("Bugs", function() {
     it("#findByTag", function(done){
         var tag = "foo";
         Bugs.findByTag(tag, function(foundBugs){
-            //console.log(foundBugs);
-            //foundBugs.length.should.equal(1);
-            //foundBugs[0].tags.should.include("foo");
+            console.log("Found bugs!!");
+            console.log(foundBugs);
+            for (var i = 0; i < foundBugs.length; i++) {
+                foundBugs[i].tags.should.include("foo");
+            };
+
             done();
         });
     });

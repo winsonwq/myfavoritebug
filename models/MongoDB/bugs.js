@@ -23,7 +23,7 @@ var Bugs = {
     },
     findByTag : function(tag, callback){
         provider.execute('bugs', function(err, coll){
-            coll.find(["{tags: \"", tag, "\" }"].join(''), function(err,cursor){
+            coll.find({ "tags": tag }, function(err,cursor){
                 cursor.toArray(function (err, result) {
                     callback(result);
                 });
