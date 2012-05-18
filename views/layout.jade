@@ -4,7 +4,9 @@ html
     title My Favorite Bug
     link(rel='stylesheet', href='/stylesheets/base.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
-    script(type='text/javascript', data-main='/scripts/main', src='/scripts/require.js')
+    script(type="text/javascript", src="/scripts/jquery-1.7.2.min.js")
+    script(type="text/javascript", src="/resources/masonry/jquery.masonry.min.js")
+    script(type='text/javascript', src='/scripts/main.js')
   body
     include includes/header
     #main-container!= body

@@ -1,4 +1,4 @@
-body,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend {
+body,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,ul {
   margin: 0;
   padding: 0;
   border: none;}
@@ -19,6 +19,9 @@ a:link,a:visited {
 
 legend {
   display: none;}
+
+ul {
+  list-style: none;}
 
 span.btn {
   display: inline-block;
