@@ -19,7 +19,6 @@ describe("Bugs", function() {
 
     it("#listALl", function(done){
         Bugs.listAll(function (allBugs){
-            console.log(allBugs);
             allBugs.length.should.be.above(0);
             done();
         });
@@ -28,10 +27,21 @@ describe("Bugs", function() {
     it("#findByTag", function(done){
         var tag = "foo";
         Bugs.findByTag(tag, function(foundBugs){
-            console.log("Found bugs!!");
-            console.log(foundBugs);
             for (var i = 0; i < foundBugs.length; i++) {
                 foundBugs[i].tags.should.include("foo");
+            };
+
+            done();
+        });
+    });
+
+    it("#searchByTitleTag", function(done){
+        var title="s", tag = "foo";
+        Bugs.searchByTitleTag(title, tag, function(foundBugs){
+            console.log(foundBugs);
+            for (var i = 0; i < foundBugs.length; i++) {
+                foundBugs[i].title.should.include(title);
+                foundBugs[i].tags.should.include(tag);
             };
 
             done();
