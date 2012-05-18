@@ -35,17 +35,17 @@ var Bugs = {
             var queryObj = {
                 $and: []
             };
-            if(title && title !=="")
+
+            if(title && title !==""){
                 queryObj.$and.push({ title: { $regex: ".*" + title + ".*", $options:'i' } });
+            }
+
             if(tags && tags.length){
                 for (var i = 0; i < tags.length; i++) {
                     queryObj.$and.push({tags: tags[i]});
                 };
             }
 
-            console.log(queryObj);
-
-            //coll.find({ $and: [ {title: { $regex : ".*"+ title +".*", $options:'i' }}, { tags: tag } ]}, function(err,cursor){
             coll.find(queryObj, function(err,cursor){
                 cursor.toArray(function (err, result) {
                     callback(result);

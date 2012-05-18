@@ -40,7 +40,6 @@ describe("Bugs", function() {
         Bugs.searchByTitleTags(title, tags, function(foundBugs){
             for (var i = 0; i < foundBugs.length; i++) {
                 foundBugs[i].title.should.include(title);
-                //foundBugs[i].tags.should.equal(tags);
             };
             done();
         });
