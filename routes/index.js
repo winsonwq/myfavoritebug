@@ -10,15 +10,10 @@ exports.init = function(app){
 
 	app.get('/search', function(req, res){
 		var name = req.query.name;
-		var tags = req.query.tags;
+		var tags = req.query.tags.split(',');
 
-		name = name || '';
-		if(tags){
-			tags = tags.split(',');
-		}
-
-		if(name != '' || tags != null){
-			Bugs.searchByTitleTags(name, tags || [], function(bugs){
+		if(name != '' || tags.length > 0){
+			Bugs.searchByTitleTags(name, tags, function(bugs){
 				res.render('index', { bugs : bugs });
 			});
 		}else{
