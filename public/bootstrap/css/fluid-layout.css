@@ -18,10 +18,17 @@ body{
 	font-size:5px;
 	font-family:"Times New Roman",Georgia,Serif;
 }
-#bug-area{
-
+#content{
+	width:100%;
 }
-
+.item {
+  width: 220px;
+  margin: 10px;
+  float: left;
+	background-color: #efefef;
+	border-radius: 4px;
+	padding:10px;
+}
 #search-container{
 padding-top: 23px;
 padding-right: 28px;
