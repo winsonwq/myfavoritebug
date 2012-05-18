@@ -18,7 +18,7 @@ describe("Bugs", function() {
   });
 
   it("#delete", function(done){
-  	var bug = { id : 8, title: "testing bug title" };
+  	var bug = { id : 8, title: "testing bug title", description: "I am too silly to describe myself...", submitter: "Mark", assignee: "Wayne", tags: ["foo", "bar"] };
   	Bugs.delete(bug, function(){
   		done();
   	});
