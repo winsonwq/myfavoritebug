@@ -38,12 +38,10 @@ describe("Bugs", function() {
     it("#searchByTitleTags", function(done){
         var title="s", tags = ["foo","bar"];
         Bugs.searchByTitleTags(title, tags, function(foundBugs){
-            console.log(foundBugs);
             for (var i = 0; i < foundBugs.length; i++) {
                 foundBugs[i].title.should.include(title);
                 //foundBugs[i].tags.should.equal(tags);
             };
-
             done();
         });
     });

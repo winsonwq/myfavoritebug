@@ -7,7 +7,7 @@ var _ = require('underscore'),
 
 function execute(collectionName, callback){
 	if(client === undefined){
-		con = new Db('myfavbugs', new Server ('127.0.0.1', 27017, {}));
+		con = new Db('myfavbugs', new Server ('10.18.10.71', 27017, {}));
 		con.open(function(err, pClient){
 			client = pClient;
 			execute(collectionName, callback);
