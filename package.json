@@ -9,6 +9,6 @@
 		"zombie": "latest",
 		"underscore" : "latest",
 		"should" : "latest",
-		"mocha" : "latest"
+		"jasmine-node" : "latest"
 	}
 }
