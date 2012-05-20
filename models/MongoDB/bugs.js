@@ -43,7 +43,7 @@ var Bugs = {
             if(tags && tags.length){
                 for (var i = 0; i < tags.length; i++) {
                     queryObj.$and.push({tags: tags[i]});
-                };
+                }
             }
             coll.find(queryObj, function(err,cursor){
                 cursor.toArray(function (err, result) {
